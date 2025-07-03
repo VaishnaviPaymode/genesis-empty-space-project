@@ -1,0 +1,53 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 25% 97%;
+    --foreground: 30 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 30 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 15% 15%;
+    --primary: 144 35% 55%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 40 30% 90%;
+    --secondary-foreground: 30 15% 15%;
+    --muted: 40 20% 95%;
+    --muted-foreground: 30 10% 45%;
+    --accent: 35 45% 85%;
+    --accent-foreground: 30 15% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 20% 85%;
+    --input: 40 20% 92%;
+    --ring: 144 35% 55%;
+    --radius: 0.5rem;
+    --wine-primary: 320 45% 35%;
+    --wine-accent: 25 55% 65%;
+    --sage-green: 144 35% 55%;
+    --warm-cream: 45 35% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+.wine-gradient {
+  background: linear-gradient(135deg, hsl(var(--wine-primary)) 0%, hsl(var(--wine-accent)) 100%);
+}
+
+.vineyard-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(144, 156, 116, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(188, 143, 108, 0.1) 0%, transparent 50%);
+}
